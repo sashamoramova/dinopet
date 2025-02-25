@@ -1,0 +1,1 @@
+export { memorizedTaskList as TaskList } from './ui/TaskList';

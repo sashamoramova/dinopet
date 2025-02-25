@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.container input {
+  padding: 14px;
+  border-radius: 8px;
+  background-color: rgb(225, 225, 225);
+  margin: 20px;
+  color: black;
+}
+
+.button {
+  margin: 20px;
+}

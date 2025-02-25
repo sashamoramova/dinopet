@@ -1,11 +1,11 @@
-import { ISignInData, ISignUpData } from ".";
+import { ISignInData, ISignUpData } from "../model";
 
 interface IValidationResult {
   isValid: boolean;
   error: string | null;
 }
 
-export default class UserValidator {
+export class UserValidator {
   static validateSignUp(data: ISignUpData): IValidationResult {
     const { username, email, password } = data;
 

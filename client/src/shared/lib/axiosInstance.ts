@@ -3,7 +3,7 @@ import axios, {
   AxiosInstance,
   AxiosResponse,
   InternalAxiosRequestConfig,
-} from "axios";
+} from 'axios';
 
 interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig {
   sent?: boolean;
@@ -14,7 +14,7 @@ export const axiosInstance: AxiosInstance = axios.create({
   withCredentials: true,
 });
 
-let accessToken = "";
+let accessToken = '';
 
 export function setAccessToken(token: string): void {
   accessToken = token;
@@ -39,7 +39,7 @@ axiosInstance.interceptors.response.use(
     if (error.response?.status === 403 && prevRequest && !prevRequest.sent) {
       try {
         //? Делаем запрос на обновление токенов.
-        const response = await axiosInstance.get("/tokens/refresh");
+        const response = await axiosInstance.get('/tokens/refresh');
 
         //? Достаём новый токен из ответа.
         accessToken = response.data.accessToken;

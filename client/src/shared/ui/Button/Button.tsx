@@ -10,7 +10,7 @@ type Props = {
   children?: ReactNode | JSX.Element;
 };
 
-export default function Button({
+export function Button({
   text,
   color,
   disabled,
