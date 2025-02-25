@@ -1,21 +1,67 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  position: fixed;
-  top: 0;
+.navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
-  background-color: rgb(255, 219, 219);
-  border-radius: 8px;
-  font-size: 18px;
+  padding: 1rem 2rem;
+  background-color: #FFC107;
+  border-bottom: 4px solid #FF9800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Закрепляем навбар вверху */
+  top: 0;
+  left: 0;
   width: 100%;
-  border-bottom: 1px solid rgb(169, 169, 169);
-  animation: fadeIn 1s ease-in-out;
+  z-index: 1000;
+  margin: 0; /* Убираем отступы */
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbarLogo button {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #FF9800;
+  background-color: #FFC107;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navbarLogo button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbarLinks button {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+ 
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url('dino-footprints.png') repeat-x;
+  opacity: 0.8;
 }

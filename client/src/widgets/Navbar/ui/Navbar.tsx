@@ -15,43 +15,53 @@ export default function Navbar(): JSX.Element {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.navbar }>
+      <div className={styles.navbarLogo}>
       <Button
-        text="Главная"
-        color="green"
+        text="dino"
         type="button"
+        color="yellow"
         onClick={() => navigate(ROUTES.HOME)}
       />
+      </div>
       {user ? (
         <>
+        <div className={styles.navbarLinks}>
           <Button
-            text="Задачи"
+            text="заметки"
             color="green"
             type="button"
             onClick={() => navigate(ROUTES.TASKS)}
           />
+          </div>
           <UserCard user={user} />
+          <div className={styles.navbarLinks}>
           <Button
-            text="Выход"
+            text="выход"
             color="red"
             type="button"
             onClick={signOutHandler}
           />
+          </div>
         </>
       ) : (
         <>
+        <div className={styles.navbarLinks}>
           <Button
-            text="Вход"
+            text="вход"
             color="green"
             type="button"
             onClick={() => navigate(`${ROUTES.AUTH_ROOT}/signin`)}
           />
+          </div>
+          <div className={styles.navbarLinks}>
           <Button
-            text="Регистрация"
+            text="регистрация"
             color="green"
             type="button"
             onClick={() => navigate(`${ROUTES.AUTH_ROOT}/signup`)}
           />
+          </div>
         </>
       )}
     </div>

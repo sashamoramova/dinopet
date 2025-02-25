@@ -1,12 +1,54 @@
-.container {
+.footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: #8BC34A;
+  border-top: 4px solid #689F38;
+  padding: 1rem 2rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.footerContent {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 30px;
-  border-top: 1px solid white;
-  background-color: #000000;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footerContent p {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.2rem;
+  color: #FFF;
+  text-shadow: 2px 2px 0 #689F38;
+  margin: 0;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerLinks button {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: #FFF; /* Белый цвет текста */
+  background-color: #FFC107; /* Жёлтый цвет фона */
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem; /* Отступы внутри кнопки */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.footerLinks button:hover {
+  background-color: #FF9800; /* Оранжевый при наведении */
+  transform: translateY(-2px);
 }

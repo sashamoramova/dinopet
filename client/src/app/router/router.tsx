@@ -5,12 +5,14 @@ import { AuthPage, TaskPage } from '@/pages';
 import RouterErrorFallback from './RouterErrorFallback';
 import AuthGuard from './AuthGuard';
 import PublicGuard from './PublicGuard';
+import MainPage from '@/pages/MainPage/MainPage';
 
 export const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
     element: <Layout />,
     children: [
+      { path: ROUTES.HOME, element: < MainPage/> },
       {
         path: ROUTES.AUTH,
         element: (

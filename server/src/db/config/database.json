@@ -1,11 +1,11 @@
 {
   "development": {
-    "use_env_variable": "DB"
+    "use_env_variable": "DB2"
   },
   "test": {
-    "use_env_variable": "DB"
+    "use_env_variable": "DB2"
   },
   "production": {
-    "use_env_variable": "DB"
+    "use_env_variable": "DB2"
   }
 }
