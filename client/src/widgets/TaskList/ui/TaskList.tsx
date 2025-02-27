@@ -23,7 +23,7 @@ export function TaskList(): JSX.Element {
           />
         ))
       ) : (
-        <h1>Задач пока не обнаружено</h1>
+        <h1>Заметок пока нет :(   </h1>
       )}
     </div>
   );

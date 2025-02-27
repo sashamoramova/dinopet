@@ -42,17 +42,17 @@ export const TaskForm: React.FC = () => {
           value={inputs.title}
           name="title"
           onChange={onChangeHandler}
-          placeholder="Название задачи"
+          placeholder="название"
         />
         <input
           type="text"
           value={inputs.body}
           name="body"
           onChange={onChangeHandler}
-          placeholder="Описание задачи"
+          placeholder="описание"
         />
         <Button type="submit" color="green">
-          Добавить задачу
+          добавить заметку
         </Button>
       </form>
     </Loader>
