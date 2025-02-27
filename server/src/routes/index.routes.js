@@ -1,10 +1,12 @@
 const router = require('express').Router(); //* получаем экземпляр роутинга из библиотеки
 const taskRoutes = require('./task.routes'); //* подтягиваем набор роутинга по определенному пути
+const dinoRoutes = require('./dino.routes');
 const authRoutes = require('./auth.routes'); //* подтягиваем набор роутинга по определенному пути для сущности User
 const formatResponse = require('../utils/formatResponse'); //* подтягиваем утилиту для унификации ответа по 404
 
 router
   .use('/tasks', taskRoutes) //* по пути на tasks отрабатывает набор из taskRoutes
+  .use('/dinos', dinoRoutes)
   .use('/auth', authRoutes); //* по пути на auth отрабатывает набор из authRoutes
 
 //! Обработка всех запросов на несуществующие маршруты (меняем стандартный ответ от express)
