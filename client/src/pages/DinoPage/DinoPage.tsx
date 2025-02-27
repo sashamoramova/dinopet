@@ -1,21 +1,22 @@
-import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
-import { DinoList } from "@/widgets/DinoList/ui/DinoList";
+// import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
+// import { DinoList } from "@/widgets/DinoList/ui/DinoList";
 
-export function DinoPage(): JSX.Element {
-  return (
-    <div>
-      <ErrorBoundary>
-        <DinoList />
-      </ErrorBoundary>
-    </div>
-  );
-}
+// export function DinoPage(): JSX.Element {
+//   return (
+//     <div>
+//       <ErrorBoundary>
+//         <DinoList />
+//       </ErrorBoundary>
+//     </div>
+//   );
+// }
 
 
 // import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
 // import { DinoList } from "@/widgets/DinoList/ui/DinoList";
-// import { DinoDetails } from "@/entities/dino/ui/DinoDetails"; // Предположим, что DinoDetails находится здесь
-// import styles from "./DinoPage.module.css"; // Создайте стили для DinoPage
+// import { DinoDetails } from "@/widgets/DinoDetails";
+// import styles from "./DinoPage.module.css"; 
+
 
 // export function DinoPage(): JSX.Element {
 //   return (
@@ -29,3 +30,17 @@ export function DinoPage(): JSX.Element {
 //     </div>
 //   );
 // }
+
+import { ErrorBoundary } from "@/shared/ui/ErrorBoundary/ErrorBoundary";
+import { DinoList } from "@/widgets/DinoList/ui/DinoList";
+import styles from "./DinoPage.module.css";
+
+export function DinoPage(): JSX.Element {
+  return (
+    <div className={styles.container}>
+      <ErrorBoundary>
+        <DinoList />
+      </ErrorBoundary>
+    </div>
+  );
+}

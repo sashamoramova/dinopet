@@ -1,0 +1,1 @@
+export { DinoDetails } from './ui/DinoDetails';
