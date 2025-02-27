@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/enums/routes';
 import Layout from '../Layout/Layout';
-import { AuthPage, TaskPage } from '@/pages';
+import { AuthPage, DinoPage, TaskPage } from '@/pages';
 import RouterErrorFallback from './RouterErrorFallback';
 import AuthGuard from './AuthGuard';
 import PublicGuard from './PublicGuard';
@@ -20,6 +20,15 @@ export const router = createBrowserRouter([
             <AuthPage />
           </PublicGuard>
         ),
+      },
+      {
+        path: ROUTES.DINOS,
+        element: (
+          <AuthGuard>
+            <DinoPage />,
+          </AuthGuard>
+        ),
+        errorElement: <RouterErrorFallback />,
       },
       {
         path: ROUTES.TASKS,

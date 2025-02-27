@@ -1,8 +1,13 @@
-import { Button } from "antd";
-import React from "react";
 import styles from "./MainPage.module.css";
+import { ROUTES } from "@/shared/enums/routes";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/shared/ui/Button";
 
-export default function MainPage() {
+
+export default function MainPage(): JSX.Element {
+  const navigate = useNavigate();
+
+
   return (
     <div className={styles.mainPage}>
       <div className={styles.background}>
@@ -18,13 +23,14 @@ export default function MainPage() {
       <div className={styles.content}>
         <h1 className={styles.title}>ДиноИгра</h1>
         <p className={styles.subtitle}>Помоги динозаврам спасти мир!</p>
-        <Button
-          text="Начать"
-          type="button"
-          onClick={() => navigate(ROUTES.LEVEL1)}
-          color="yellow"
-          className={styles.startButton}
-        />
+        <div className={styles.startButton}>
+          <Button
+            text="Начать"
+            type="button"
+            onClick={() => navigate(ROUTES.DINOS)}
+            color="yellow"
+          />
+        </div>
       </div>
     </div>
   );

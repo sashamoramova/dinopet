@@ -1,0 +1,1 @@
+export { memorizedDinoList as DinoList } from './ui/DinoList';

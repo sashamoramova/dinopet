@@ -39,7 +39,7 @@ const serverConfig = (app) => {
 
   //* настройка статики, папка public ассоциирована с маршрутом запроса
   app.use(
-    '/static/images',
+    '/images',
     express.static(path.resolve(__dirname, '..', 'public', 'images'))
   );
 };

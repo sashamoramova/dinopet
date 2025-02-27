@@ -3,4 +3,5 @@ export enum ROUTES {
   AUTH_ROOT = "/auth",
   AUTH = "/auth/:type",
   TASKS = "/tasks",
+  DINOS = "/dinos",
 }

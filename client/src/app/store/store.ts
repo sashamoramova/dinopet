@@ -1,11 +1,13 @@
-import { taskReducer } from '@/entities/task';
 import { userReducer } from '@/entities/user';
+import { taskReducer } from '@/entities/task';
+import { dinoReducer } from '@/entities/dino';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
     user: userReducer,
     task: taskReducer,
+    dino: dinoReducer,
   },
 });
 

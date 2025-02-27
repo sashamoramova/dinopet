@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { Button } from "antd";
+// import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/shared/ui/Button";
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     // <footer className={styles.container}>
     //   <p>© 2025 froggyBug</p>

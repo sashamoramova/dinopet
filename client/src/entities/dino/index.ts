@@ -1,9 +1,6 @@
-export { taskReducer } from './slice';
+export { dinoReducer } from './slice';
 export {
-  getAllTasksThunk,
-  createTaskThunk,
-  deleteTaskThunk,
-  updateTaskThunk,
+  getAllDinosThunk,
 } from './api';
-export { TaskCard } from './ui/TaskCard';
-export type { IRawTaskData, ITask, ArrayTasksType } from './model';
+export { DinoCard } from './ui/DinoCard';
+export type { IRawDinoData, IDino, ArrayDinosType } from './model';
