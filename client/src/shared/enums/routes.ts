@@ -4,4 +4,5 @@ export enum ROUTES {
   AUTH = "/auth/:type",
   TASKS = "/tasks",
   DINOS = "/dinos",
+  GAME = "/game",
 }

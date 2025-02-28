@@ -76,8 +76,12 @@ import { DinoCard, IDino } from "@/entities/dino";
 import { useDinoList } from "../useDinoList";
 import styles from "./DinoList.module.css";
 import { DinoDetails } from "@/widgets/DinoDetails";
+import { Button } from "@/shared/ui/Button";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@/shared/enums/routes";
 
 export function DinoList(): JSX.Element {
+  const navigate = useNavigate();
   const { dinos } = useDinoList();
   const [selectedDino, setSelectedDino] = useState<IDino | null>(null);
 
@@ -86,6 +90,7 @@ export function DinoList(): JSX.Element {
   };
 
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.list}>
         {dinos.length > 0 ? (
@@ -102,5 +107,14 @@ export function DinoList(): JSX.Element {
       </div>
       <DinoDetails dino={selectedDino} onSelect={() => alert(`Выбран ${selectedDino?.name}`)} />
     </div>
+    <div>
+      <Button
+                  text="Начать"
+                  type="button"
+                  onClick={() => navigate(ROUTES.GAME)}
+                  color="yellow"
+                />
+    </div>
+    </>
   );
 }
